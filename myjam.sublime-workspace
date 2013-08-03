@@ -1,0 +1,439 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"O",
+				"OAuth2Values"
+			],
+			[
+				"goo",
+				"google_id"
+			],
+			[
+				"toke",
+				"token_payload"
+			],
+			[
+				"with",
+				"withConnection"
+			],
+			[
+				"js",
+				"JSONFactory"
+			],
+			[
+				"Oa",
+				"OAuth2Values"
+			],
+			[
+				"token",
+				"token_payload"
+			],
+			[
+				"id",
+				"id_token_map"
+			],
+			[
+				"oauth",
+				"oauth_post_request"
+			],
+			[
+				"all",
+				"all_param_"
+			],
+			[
+				"get",
+				"getFileName"
+			],
+			[
+				"sort",
+				"sortWith"
+			],
+			[
+				"rev",
+				"reverses"
+			],
+			[
+				"files",
+				"filesList"
+			],
+			[
+				"contains",
+				"containsPermission"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"file",
+				"filesList"
+			],
+			[
+				"is",
+				"isDirectory"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"play",
+				"Set Syntax: Play Scala Template (HTML)"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax",
+				"Set Syntax: HTML"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"set syntax",
+				"Set Syntax: Scala"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/william/Documents/git/heroku/mywholeinternet/conf/application.conf",
+		"/Users/william/Documents/git/heroku/mywholeinternet/.env",
+		"/Users/william/Downloads/play-2.1.2/play",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/controllers/UserAuth.scala",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/models/User.scala",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/views/index.scala.html",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/controllers/Application.scala",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/views/main.scala.html",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/views/login.scala.html",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/william/Documents/git/heroku/mywholeinternet/conf/routes",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/views/oauth_button.scala.html",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/Global.scala",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/globalconfig.scala",
+		"/Users/william/Documents/git/heroku/mywholeinternet/project/Build.scala",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/william/Documents/git/heroku/mywholeinternet/app/views/oauth.scala.html",
+		"/Users/william/Documents/git/heroku/mywholeinternet/conf/evolutions/default/1.sql",
+		"/Users/william/Documents/git/heroku/mywholeinternet/.gitignore",
+		"/Users/william/Documents/git/heroku/mywholeinternet/Procfile",
+		"/Users/william/Documents/git/heroku/mywholeinternet/conf/dependencies.yml",
+		"/Users/william/Documents/git/scala-list/main.scala",
+		"/Users/william/Documents/git/scala-list/README.md",
+		"/Users/william/Documents/git/scala-list/.git/config",
+		"/Users/william/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"user",
+			"findUser",
+			"UserByGoogleId",
+			"id_type",
+			"user_info",
+			"google_id",
+			"Option",
+			"Application",
+			"message",
+			"Long",
+			"googleOAUTHInfo",
+			"globalconfig",
+			"getPayload",
+			"token_payload",
+			"oauth2google",
+			"gOAUTH2Info",
+			"recurse_param_",
+			"f",
+			"all_parameter_",
+			"list_parameter_",
+			"()",
+			"() ",
+			"Text",
+			"list_parameter_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "myjam.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"user",
+				"app/models/User.scala"
+			],
+			[
+				"1",
+				"conf/evolutions/default/1.sql"
+			],
+			[
+				"env",
+				".env"
+			],
+			[
+				"globa",
+				"app/globalconfig.scala"
+			],
+			[
+				"app",
+				"conf/application.conf"
+			],
+			[
+				".en",
+				".env"
+			],
+			[
+				"inde",
+				"app/views/index.scala.html"
+			],
+			[
+				"appconf",
+				"conf/application.conf"
+			],
+			[
+				"appli",
+				"app/controllers/Application.scala"
+			],
+			[
+				"user.",
+				"app/models/User.scala"
+			],
+			[
+				"auth",
+				"app/controllers/UserAuth.scala"
+			],
+			[
+				"html",
+				"app/views/main.scala.html"
+			],
+			[
+				"useraut",
+				"app/controllers/UserAuth.scala"
+			],
+			[
+				"index",
+				"app/views/index.scala.html"
+			],
+			[
+				"users",
+				"app/models/User.scala"
+			],
+			[
+				"route",
+				"conf/routes"
+			],
+			[
+				"control",
+				"app/controllers/Application.scala"
+			],
+			[
+				"build",
+				"project/Build.scala"
+			],
+			[
+				"conf",
+				"conf/application.conf"
+			],
+			[
+				"rout",
+				"conf/routes"
+			],
+			[
+				"global",
+				"app/globalconfig.scala"
+			],
+			[
+				"oaut",
+				"app/views/oauth.scala.html"
+			],
+			[
+				"in",
+				"app/views/index.scala.html"
+			],
+			[
+				"main",
+				"app/views/main.scala.html"
+			],
+			[
+				"views",
+				"app/views/index.scala.html"
+			],
+			[
+				"1.sq",
+				"conf/evolutions/default/1.sql"
+			],
+			[
+				"u",
+				"app/controllers/UserAuth.scala"
+			],
+			[
+				"contro",
+				"app/controllers/Application.scala"
+			],
+			[
+				"appl",
+				"conf/application.conf"
+			],
+			[
+				"app/",
+				"app/controllers/Application.scala"
+			],
+			[
+				"view",
+				"app/views/main.scala.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
