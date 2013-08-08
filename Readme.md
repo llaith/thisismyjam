@@ -1,4 +1,6 @@
-This is your new Play 2.1 application
-=====================================
+This is My Jam
+===
 
-This file will be packaged with your application, when using `play dist`.
+A site to tell the world what you're listening to.
+
+Looks up artist/album/track info from searching using the musicbrainz api.
