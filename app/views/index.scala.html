@@ -1,7 +1,26 @@
 @(message: String)
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message)
-    
+
+@main("Untitled") {
+	<div ng-controller="resultsControl">
+		<form ng-submit="search()">
+			<input type="text" name="query" ng-model="search_query"/>
+			<input type="submit"/>
+		</form>
+
+		<div class="results">
+			<ul>
+				<li ng-repeat="track in tracks">
+					<form action=@routes.Application.submitSong method="POST">
+						<h3>{{track.name}}</h3>
+						<h4>{{track.artist}}</h4>
+						<input type="submit" name="submit_dummy" value="Jam it"/>
+						<input type="hidden" name="artist" value="{{track.artist}}" />
+						<input type="hidden" name="title" value="{{track.name}}" />
+						<input type="hidden" name="mbid" value="{{track.mbid}}" />
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
 }

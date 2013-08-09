@@ -1,15 +1,18 @@
-@(title: String)(content: Html)
+@(title: String, ng_controller: String = "")(content: Html)
 
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
     <head>
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/normalize.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/angular.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/controller.js")" type="text/javascript"></script>
     </head>
-    <body>
+    <body @if(ng_controller != "") {ng_controller}>
         @content
     </body>
 </html>
