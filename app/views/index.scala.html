@@ -23,4 +23,13 @@
 			</ul>
 		</div>
 	</div>
+
+	<div ng-controller="jamsControl">
+	<ul>
+		<li ng-repeat="jam in jams">
+			<h3>{{jam.title}}</h3>
+			<h4>{{jam.artist}}</h4>
+		</li>
+	</ul>
+	</div>
 }
