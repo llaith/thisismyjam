@@ -9,4 +9,5 @@ GET     /                           controllers.Application.index
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET		/search						controllers.Application.search
+GET		/songs/list					controllers.Application.listSongs
 POST	/jam/song					controllers.Application.submitSong

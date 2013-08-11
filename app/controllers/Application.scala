@@ -6,6 +6,8 @@ import play.api.data.Forms._
 import play.api.mvc._
 import play.api.libs.concurrent.Execution.Implicits._
 
+import play.api.libs.json._
+
 import models.MusicModel
 
 object Application extends Controller with MusicSearch {
@@ -29,5 +31,14 @@ object Application extends Controller with MusicSearch {
          }
     }
 
-    //Ok(artist + ", " + title + ", " + mbid)
+    def listSongs = Action { implicit request =>
+        Async {
+            val songsList = MusicModel.listSongs(10)
+            val songsJsonArray = songsList.map { song => Json.arr(song) }
+
+            songsJsonArray.map { array => Ok(array(0)) }
+        }
+
+    }
+
 }
