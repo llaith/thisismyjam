@@ -19,7 +19,7 @@ object Application extends Controller with MusicSearch {
     def search = Action { implicit request =>
         Async {
     		musicSearch( 
-                Form("query" -> text).bindFromRequest.get.replace(" ","+") 
+                Form("query" -> text).bindFromRequest.get
             ).map { response => Ok(response.json) }
         }
     }  
