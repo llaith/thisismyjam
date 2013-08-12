@@ -26,10 +26,8 @@ function resultsControl($scope, $http) {
 
   	$scope.search = function(){
       $scope.resultsLoading = true;
-      console.log("starting search");
   		$http.get('/search', {'params': {"query" : $scope.search_query} }).success( function(data) {
   			$scope.tracks = data.results.trackmatches.track;
-        console.log("search finished");
         $scope.resultsLoading = false;
   			$scope.showMoreResultsButton = true;
   		});
