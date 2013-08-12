@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	width: 100%;
+	line-height: 1.5em;
+}
+
+div {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+h1  {
+	font-size: 3em;
+	font-family: novecentowide-medium;
+}
+
+	h1 em{
+		font-style: normal;
+		font-weight: normal;
+		font-family: novecentowide-demibold;
+	}
+
+h2 {
+	font-family: novecentowide-book;
+}
+
+.titleArea, .jamsArea, .results {
+	text-align: center;
+}
+
+.titleArea  .colour {
+	color: rgba(0, 31, 255, 1.0);
+}
+
+.loadingIcon {
+	font-family: MeteoconsRegular;
+	margin: 1.0em 0.5em 0.5em 0.5em !important;
+}
+
+.loadingIcon:after {
+	font-size: 3em;
+ 	color: rgba(0, 0, 0, 0.15);
+	content: "9";
+	
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: loadingPulse;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-duration: 4s;
+	-moz-animation-name: loadingPulse;
+	-moz-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes loadingPulse {
+	from {
+		color: rgba(0,0,0,0.15);
+	}		
+	50% {
+		color: rgba(0,0,0,0.06);
+	}		
+	to {
+		color:  rgba(0,0,0,0.15);
+	}
+}
+@-moz-keyframes loadingPulse {
+	from {
+		color: rgba(0,0,0,0.15);
+	}		
+	50% {
+		color: rgba(0,0,0,0.08);
+	}		
+	to {
+		color:  rgba(0,0,0,0.15);
+	}
+}
+.loadingIcon p {
+	display: none;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 50%;
+}
+
+	ul  li {
+		margin:  0.5em auto;
+		text-align: left;
+		
+		border-bottom: 1px solid rgba(0, 31, 255, 0.13);
+	}
+
+	ul  li  h3, h4 {
+		padding: 0em;
+		margin:  0;
+		line-height: 1.5em;
+	}
+	
+	ul  li  h3 {
+		padding:  0em;
+		font-size: 1.0em;
+		line-height: 1.25em;
+
+	}
+	
+	ul  li h4 {
+		padding: 0;
+		font-size: 0.8em;
+		margin-left:  1.0em;
+	}
+	
+.results ul li input {
+	display: block;
+	margin: 0.5em auto;
+}
+
+.results input {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
