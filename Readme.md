@@ -11,6 +11,9 @@ Searches artist/track info using the last.fm api and sends it off to a MongoDB d
 Live version coming soon!
 
 ##Credits
+
 Synthview: for the Novecento Wide webfonts
+
 Alessio Atzeni: for the Meteocons weather web icons
+
 Nicolas Gallagher: for normalize.css
