@@ -10,10 +10,10 @@
 
 		<div class="results">
 			<ul>
-				<li ng-repeat="track in tracks">
+				<li ng-repeat="track in tracks | limitTo:maxResults">
 					<form action=@routes.Application.submitSong method="POST">
 						<h3>{{track.name}}</h3>
-						<h4>{{track.artist}}</h4>
+						<h4>by {{track.artist}}</h4>
 						<input type="submit" name="submit_dummy" value="Jam it"/>
 						<input type="hidden" name="artist" value="{{track.artist}}" />
 						<input type="hidden" name="title" value="{{track.name}}" />
@@ -21,6 +21,7 @@
 					</form>
 				</li>
 			</ul>
+			<input type="button" ng-click="moreResults()" ng-show="showMoreResultsButton" value="More" />
 		</div>
 	</div>
 
@@ -28,7 +29,7 @@
 	<ul>
 		<li ng-repeat="jam in jams">
 			<h3>{{jam.title}}</h3>
-			<h4>{{jam.artist}}</h4>
+			<h4>by {{jam.artist}}</h4>
 		</li>
 	</ul>
 	</div>
