@@ -2,6 +2,11 @@
 
 
 @main("Untitled") {
+
+	<div class="heading-box">
+		<h1>This is my <em>jam</em></h1>
+	</div>
+
 	<div ng-controller="resultsControl">
 		<form ng-submit="search()">
 			<input type="text" name="query" ng-model="search_query"/>
@@ -21,16 +26,22 @@
 					</form>
 				</li>
 			</ul>
+			<div ng-show="resultsLoading">
+				<p>loading</p>
+			</div>
 			<input type="button" ng-click="moreResults()" ng-show="showMoreResultsButton" value="More" />
 		</div>
 	</div>
 
 	<div ng-controller="jamsControl">
-	<ul>
-		<li ng-repeat="jam in jams">
-			<h3>{{jam.title}}</h3>
-			<h4>by {{jam.artist}}</h4>
-		</li>
-	</ul>
+		<ul>
+			<li ng-repeat="jam in jams">
+				<h3>{{jam.title}}</h3>
+				<h4>by {{jam.artist}}</h4>
+			</li>
+		</ul>
+		<div ng-hide="jams">
+			<p>loading</p>
+		</div>
 	</div>
 }
