@@ -25,7 +25,12 @@ object Application extends Controller with MusicSearch {
     }  
 
     def submitSong = Action { implicit request => 
-        val (artist, title, mbid) = Form(tuple("artist" -> text, "title" -> text, "mbid" -> text)).bindFromRequest.get
+        val jsRequest = request.body.asJson.getOrElse(Json.obj())
+        val (artist, title, mbid) =  (
+            (jsRequest \ "artist").as[String],
+            (jsRequest \ "track").as[String],
+            (jsRequest \ "mbid").as[String]
+        )
         Async {
             MusicModel.submitSong(artist, title, mbid, "last.fm").map(result => Ok(result))
          }
