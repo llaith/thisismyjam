@@ -8,6 +8,8 @@ http://blog.tomaka17.com/2012/12/random-tricks-when-using-angularjs/
 angular
   .module('appMessenger', [])
   .config(function($provide, $httpProvider, $compileProvider) {
+    'use strict';
+    
     var linkedElements = $();
 
     var sendMessage = function(content, messageType, time) {

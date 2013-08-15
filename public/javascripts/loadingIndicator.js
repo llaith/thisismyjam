@@ -22,6 +22,7 @@
 angular
   .module('loadingIndicator', [])
   .config(function($provide, $httpProvider, $compileProvider) {
+    'use strict';
 
     $httpProvider.interceptors.push(function($q, $rootScope) {
       return {
