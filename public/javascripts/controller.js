@@ -4,7 +4,7 @@
 
 function jamsControl($scope, $http) {
 
-	$http.get('/songs/list').
+	$http.get('/songs/list', {'loadingItemID' : 'list'}).
     success(function(data) {
   		$scope.jams = data;
   	});
@@ -25,12 +25,12 @@ function resultsControl($scope, $http) {
     };
 
   	$scope.search = function(){
-      $scope.resultsLoading = true;
-      $scope.tracks = null
-
-  		$http.get('/search', {'params': {"query" : $scope.search_query} }).success( function(data) {
+  		$http.get('/search', 
+        {'params': {"query" : $scope.search_query},
+         'loadingItemID' : 'search' }
+      ).success( function(data) {
+        
   			$scope.tracks = data.results.trackmatches.track;
-        $scope.resultsLoading = false;
   			$scope.showMoreResultsButton = true;
   		});
   	};

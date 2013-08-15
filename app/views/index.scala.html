@@ -28,7 +28,7 @@
 					</form>
 				</li>
 			</ul>
-			<div class="loadingIcon" ng-show="resultsLoading">
+			<div class="loadingIcon" loading-item="search">
 				<p>loading</p>
 			</div>
 			<input type="button" ng-click="moreResults()" ng-show="showMoreResultsButton" value="More" />
@@ -43,8 +43,12 @@
 				<h4>by {{jam.artist}}</h4>
 			</li>
 		</ul>
-		<div class="loadingIcon" ng-hide="jams">
+		<div class="loadingIcon" loading-item="list">
 			<p>loading</p>
 		</div>
 	</div>
+
+
+
+
 }
