@@ -11,6 +11,10 @@ div {
 	margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
 h1  {
 	font-size: 3em;
 	font-family: novecentowide-medium;
@@ -18,12 +22,11 @@ h1  {
 
 	h1 em{
 		font-style: normal;
-		font-weight: normal;
 		font-family: novecentowide-demibold;
 	}
 
 h2 {
-	font-family: novecentowide-book;
+	font-family: novecentowide-normal;
 }
 
 .titleArea, .jamsArea, .results {
