@@ -21,6 +21,21 @@ object MusicModel extends Controller with MongoController {
 
 	private def jams_collection: JSONCollection = db.collection[JSONCollection]("jams")
 
+	/* Schema for this collection:
+		{
+			/* Required: */
+			"type" -> String in ["song"],
+			"service" -> String in ["last.fm"],
+			"created" -> Date,
+
+			/* Song specific: */
+			"artist" -> Option[String],
+			"title" -> Option[String],
+			"mbid" -> Option[String] /* Musicbrainz id */
+		}
+
+	 */
+
 	/* Submits a song as a "jam", artist and title being the artist and title of the song, mbid being the 
 	 * unique Musicbrainz identifier for the song, service being the name of the service used to find the 
 	 * song.
