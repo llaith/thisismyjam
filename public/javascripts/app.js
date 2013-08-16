@@ -1,12 +1,13 @@
-var myjamModule = angular.module('myjam', ['appMessenger', 'loadingIndicator']).controller();
+var myjamModule = angular.module('myjam', ['appMessenger', 'loadingIndicator']);
 
 /* Controllers */
 
 myjamModule.controller('jamsControl', ['$scope', '$http', function($scope, $http) {
 	'use strict';
 
-	$http.get('/songs/list', {'loadingItemID' : 'list'}).
-    success(function(data) {
+	$http.get(
+		'/songs/list', {'loadingItemID' : 'list'}
+	).success(function(data) {
   		$scope.jams = data;
   	});
 }]);
@@ -14,32 +15,28 @@ myjamModule.controller('jamsControl', ['$scope', '$http', function($scope, $http
 myjamModule.controller('resultsControl', ['$scope', '$http', function($scope, $http) {
 	'use strict';
 
-    //number of results to show, starts at 5, is a variable so we can show more
+    //number of results to show, starts at 5. Is a variable so we can increase it dynamically
     $scope.maxResults = 5;
-    //visibility of the show more results button, only toggled when a search is performed
-    $scope.showMoreResultsButton = false;
 
     $scope.moreResults = function() {
         $scope.maxResults += 5;
-        if ($scope.maxResults >= 15){
-          $scope.showMoreResultsButton = false;
-        }
+    };
+
+    $scope.showMoreResultsButton = function() {
+    	return !($scope.maxResults >= 15 || $scope.tracks);
     };
 
   	$scope.search = function(){
   		$http.get('/search', 
-        {'params': {"query" : $scope.search_query},
-         'loadingItemID' : 'search' }
-      ).success( function(data) {
-        
+        {	'params': {"query" : $scope.search_query},
+        	'loadingItemID' : 'search' }
+      	).success( function(data) {
   			$scope.tracks = data.results.trackmatches.track;
-  			$scope.showMoreResultsButton = true;
   		});
   	};
 
     $scope.submit = function(artist, track, mbid) {
       $http.post('/jam/song', {"artist": artist, "track": track, "mbid": mbid});
       $scope.tracks = null;
-      $scope.showMoreResultsButton = false;
     };
 }]);
