@@ -28,7 +28,7 @@ object Application extends Controller with MusicSearch {
         val jsRequest = request.body.asJson.getOrElse(Json.obj())
         val (artist, title, mbid) =  (
             (jsRequest \ "artist").as[String],
-            (jsRequest \ "track").as[String],
+            (jsRequest \ "name").as[String], 
             (jsRequest \ "mbid").as[String]
         )
         Async {
@@ -38,7 +38,7 @@ object Application extends Controller with MusicSearch {
 
     def listSongs = Action { implicit request =>
         Async {
-            val songsList = MusicModel.listSongs(10)
+            val songsList = MusicModel.listSongs(25)
             val songsJsonArray = songsList.map { song => Json.arr(song) }
 
             songsJsonArray.map { array => Ok(array(0)) }

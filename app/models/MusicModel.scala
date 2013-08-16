@@ -30,23 +30,23 @@ object MusicModel extends Controller with MongoController {
 
 			/* Song specific: */
 			"artist" -> Option[String],
-			"title" -> Option[String],
+			"name" -> Option[String],
 			"mbid" -> Option[String] /* Musicbrainz id */
 		}
 
 	 */
 
-	/* Submits a song as a "jam", artist and title being the artist and title of the song, mbid being the 
+	/* Submits a song as a "jam", artist and name being the artist and name of the song, mbid being the 
 	 * unique Musicbrainz identifier for the song, service being the name of the service used to find the 
 	 * song.
 	 */
-	def submitSong(artist: String, title: String, mbid: String, service: String): Future[JsObject] = {
+	def submitSong(artist: String, name: String, mbid: String, service: String): Future[JsObject] = {
 		    val newSong = Json.obj(
 		        "type" -> "song",
 		        "service" -> service,
 		        "created" -> new java.util.Date().getTime(),
 		        "artist" -> artist,
-		        "title" -> title,
+		        "name" -> name,
 		        "mbid" -> mbid
 		    )
 	    jams_collection.insert(newSong).map{ lastError => 
@@ -61,7 +61,7 @@ object MusicModel extends Controller with MongoController {
 	 */
 	def listSongs(limit: Int = 30): Future[List[JsObject]] = {
 		jams_collection
-			.find( Json.obj(), Json.obj("artist" -> 1, "title" -> 1) )
+			.find( Json.obj(), Json.obj("artist" -> 1, "name" -> 1, "mbid" -> 1) )
 			.sort(Json.obj("created" -> -1))
 			.options( QueryOpts().batchSize(limit) )
 			.cursor[JsObject]
