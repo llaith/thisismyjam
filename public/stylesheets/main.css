@@ -1,3 +1,5 @@
+/* Normalization */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -29,13 +31,17 @@ h2 {
 	font-family: novecentowide-normal;
 }
 
+/* Title area */
+
 .titleArea, .jamsArea, .results {
 	text-align: center;
 }
 
 .titleArea  .colour {
-	color: rgba(0, 31, 255, 1.0);
+	color: hsl(233, 100%, 50%);
 }
+
+/* Loading icon */
 
 .loadingIcon {
 	font-family: MeteoconsRegular;
@@ -48,7 +54,7 @@ h2 {
 
 .loadingIcon:after {
 	font-size: 3em;
- 	color: rgb(191, 191, 191);
+ 	color: hsl(0, 0%, 75%);
 	content: "8";
 	
 	-webkit-animation-duration: 2s;
@@ -82,6 +88,8 @@ h2 {
 	}
 }
 
+/* Standard list */
+
 ul {
 	list-style-type: none;
 	padding: 0;
@@ -93,7 +101,7 @@ ul {
 		margin:  0.5em auto;
 		text-align: left;
 		
-		border-bottom: 1px solid rgba(0, 31, 255, 0.13);
+		border-bottom: 1px solid hsla(233, 100%, 90%);
 	}
 
 	ul  li  h3, h4 {
@@ -115,9 +123,13 @@ ul {
 		margin-left:  1.0em;
 	}
 
+/* Jams listing */
+
 .jamsArea ul .local {
 	color: #aaa;
 }
+
+/* Results area */
 	
 .results ul li input {
 	display: block;
@@ -140,11 +152,11 @@ ul {
 }
 
 .jamButton:hover {
-	background-color: rgba(0, 31, 255, 1.0);
+	background-color: hsl(233, 100%, 50%);
 	color: #fff;
 
 	border-radius: 3px;
-	border: 1px solid rgb(107, 124, 255);
+	border: 1px solid hsl(233, 100%, 71%);
 }
 
 .details {
@@ -154,6 +166,8 @@ ul {
 .jamButton .submittingIcon {
 	float:right;
 }
+
+/* Submitting waiting icon */
 
 .submittingIcon {
 	font-family: MeteoconsRegular;
@@ -165,7 +179,7 @@ ul {
 
 .submittingIcon:after {
 	font-size: 2em;
- 	color: rgb(255, 255, 255);
+ 	color: hsl(0, 100%, 100%);
 	content: "9";
 	
 	-webkit-animation-duration: 2s;
@@ -175,6 +189,8 @@ ul {
 	-moz-animation-name: loadingPulse;
 	-moz-animation-iteration-count: infinite;
 }
+
+/* Animation for items appearing and disappearing from opacity change */
 
 .opacityAnimation-repeat-enter,
 .opacityAnimation-repeat-leave,
@@ -202,3 +218,21 @@ ul {
  
 .opacityAnimation-repeat-move { }
 .opacityAnimation-repeat-move.opacityAnimation-repeat-move-active { }
+
+/* AHAX message list */
+
+.errorMessage, .successMessage {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 1.2em;
+	border-radius: 2px;
+}
+
+.errorMessage {
+	background-color: red;
+}
+
+.successMessage {
+	background-color: hsl(233, 100%, 65%);
+}
