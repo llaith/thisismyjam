@@ -19,16 +19,16 @@ h1, h2, h3, h4, h5 {
 
 h1  {
 	font-size: 3em;
-	font-family: novecentowide-medium;
+	font-family: 'novecentowide-medium', 'sans-serif';
 }
 
 	h1 em{
 		font-style: normal;
-		font-family: novecentowide-demibold;
+		font-family: 'novecentowide-demibold', 'sans-serif';
 	}
 
 h2 {
-	font-family: novecentowide-normal;
+	font-family: 'novecentowide-normal', 'sans-serif';
 }
 
 /* Title area */
@@ -44,7 +44,7 @@ h2 {
 /* Loading icon */
 
 .loadingIcon {
-	font-family: MeteoconsRegular;
+	font-family: 'MeteoconsRegular';
 	margin: 1.0em 0.5em 0.5em 0.5em !important;
 }
 .loadingIcon p {
@@ -170,7 +170,7 @@ ul {
 /* Submitting waiting icon */
 
 .submittingIcon {
-	font-family: MeteoconsRegular;
+	font-family: 'MeteoconsRegular';
 	margin: 1.0em 0.5em 0.5em 0.5em !important;
 }
 .submittingIcon p {
