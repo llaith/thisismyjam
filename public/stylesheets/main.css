@@ -115,7 +115,7 @@
 	}
 
 	.details {
-		float: left;
+		display: inline-block;
 	}
 
 /* Animation for items appearing and disappearing from opacity change */
@@ -177,7 +177,7 @@
 /* Icons */
 
 	.icon-music {
-	    float: left;
+	    display: inline-block;
 	    margin-right: 0.5em;
 	    color: hsl(233, 100%, 80%);
 	    font-size: 1em;
@@ -233,7 +233,7 @@
 	/* Submitting waiting icon */
 
 	.jamButton .submittingIcon {
-		float:right;
+		float: right;
 	}
 
 	.submittingIcon {
