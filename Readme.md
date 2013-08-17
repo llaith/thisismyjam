@@ -8,12 +8,18 @@ Uses Scala's Play 2.1.x with MongoDB using Reactive Mongo and the Reactive Mongo
 Searches artist/track info using the last.fm api and sends it off to a MongoDB database.
 
 ##Live version
-Live version coming soon!
+A live version of the site is running at:
+
+[http://thisismyjam.herokuapp.com/](http://thisismyjam.herokuapp.com/)
 
 ##Credits
 
-Synthview: for the Novecento Wide webfonts
+Synthview: for the Novecento Wide web fonts
 
 Alessio Atzeni: for the Meteocons weather web icons
 
 Nicolas Gallagher: for normalize.css
+
+Dave Gandy: for Font Awesome, an icon-based web font
+
+Łukasz Dziedzic: for the Lato web font 
