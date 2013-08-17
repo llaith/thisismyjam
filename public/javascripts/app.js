@@ -23,20 +23,31 @@ myjamModule.controller('resultsControl', ['$scope', '$http', function($scope, $h
     };
 
     $scope.showMoreResultsButton = function() {
-    	return !($scope.maxResults >= 15 || $scope.tracks);
+      //corresponds to showing the "more" button in the results list
+      //condition one: tracks exists (is not null)
+      //condition two: the number of results we're showing now is less than the number we have
+    	return ($scope.tracks && $scope.maxResults < $scope.tracks.length );
     };
 
   	$scope.search = function(){
+      $scope.maxResults = 5;
   		$http.get('/search', 
         {	'params': {"query" : $scope.search_query},
         	'loadingItemID' : 'search' }
       	).success( function(data) {
-  			$scope.tracks = data.results.trackmatches.track;
+    			$scope.tracks = data.results.trackmatches.track;
   		});
   	};
 
-    $scope.submit = function(artist, track, mbid) {
-      $http.post('/jam/song', {"artist": artist, "track": track, "mbid": mbid});
-      $scope.tracks = null;
+    $scope.submit = function(index) {
+      var track = $scope.tracks[index];
+
+      //clear out the other results while we're waiting on the request for better user feedback
+      $scope.tracks = [track]; 
+
+      $http.post('/jam/song', track, {'loadingItemID': ("jam.submit." + index) }).success(function(data) {
+        $scope.tracks = null;
+        $rootScope.addToJamsList(track);
+      });
     };
 }]);
