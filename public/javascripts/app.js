@@ -2,20 +2,41 @@ var myjamModule = angular.module('myjam', ['appMessenger', 'loadingIndicator']);
 
 /* Controllers */
 
-myjamModule.controller('jamsControl', ['$scope', '$http', function($scope, $http) {
+myjamModule.controller('jamsControl', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
 	'use strict';
+
+  $scope.listAnimation = {enter: 'opacityAnimation-repeat-enter',
+                        leave: 'opacityAnimation-repeat-leave',
+                        move: 'opacityAnimation-repeat-move'};
 
 	$http.get(
 		'/songs/list', {'loadingItemID' : 'list'}
 	).success(function(data) {
   		$scope.jams = data;
   	});
+
+  /* Global function to add an element to the local list of jams.
+   * Seems weird to put this into a service or what have you so for now it's just a simple function 
+   * callable anywhere to be able to add items to the jams list, as in the case of submitting a track to 
+   * be "jammed" and calling this function to reflect it on the page too, for better user feedback. 
+   */
+  $rootScope.addToJamsList = function(newJam) {
+    var newJamLocal = newJam;
+    newJamLocal["local"] = "local";
+    $scope.jams.unshift(newJamLocal);
+  };
+
 }]);
 
-myjamModule.controller('resultsControl', ['$scope', '$http', function($scope, $http) {
+myjamModule.controller('resultsControl', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
 	'use strict';
 
-    //number of results to show, starts at 5. Is a variable so we can increase it dynamically
+
+    $scope.listAnimation = {enter: 'opacityAnimation-repeat-enter',
+                        leave: 'opacityAnimation-repeat-leave',
+                        move: 'opacityAnimation-repeat-move'};
+
+    //number of results to show, starts at 5. Is a variable so we can increase it dynamically through the binding
     $scope.maxResults = 5;
 
     $scope.moreResults = function() {
