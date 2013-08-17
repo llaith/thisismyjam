@@ -20,6 +20,7 @@
 			<ul>
 				<li ng-repeat="track in tracks | limitTo:maxResults" ng-animate="listAnimation">
 					<button class="jamButton" ng-click="submit($index)">
+						<i class="icon-music"></i>
 						<div class="details">
 							<h3>{{track.name}}</h3>
 							<h4>by {{track.artist}}</h4>
@@ -39,8 +40,11 @@
 		<h2>What people are jamming to:</h2>
 		<ul>
 			<li ng-repeat="jam in jams" class="{{jam.local}}" ng-animate="listAnimation">
-				<h3>{{jam.name}}</h3>
-				<h4>by {{jam.artist}}</h4>
+			<i class="icon-music"></i>
+				<div class="details">
+					<h3>{{jam.name}}</h3>
+					<h4>by {{jam.artist}}</h4>
+				</div>
 			</li>
 		</ul>
 		<div class="loadingIcon" loading-item="list">
