@@ -6,13 +6,23 @@
 	<div class="messagesList" app-messages>
 	</div>
 
+	<div class="detailsArea">
+		<a href="https://github.com/williamge/thisismyjam" title="github page">
+			<i class="icon-github"></i>
+		</a>
+		<span>|</span>
+		<a href="https://bitbucket.org/williamg/thisismyjam" title="bitbucket page">
+			<i class="icon-bitbucket"></i>
+		</a>
+	</div>
+
 	<div class="titleArea">
 		<h1>This is my <em>jam</em><span class="colour">.</span></h1>
 	</div>
 
 	<div ng-controller="resultsControl" class="results">
 		<form ng-submit="search()">
-			<input type="text" name="query" ng-model="search_query"/>
+			<input type="text" name="query" ng-model="search_query" placeholder="What have you been listening to?"/>
 			<input type="submit" value="Search"/>
 		</form>
 
@@ -32,7 +42,7 @@
 			<div class="loadingIcon" loading-item="search">
 				<p>loading</p>
 			</div>
-			<input type="button" ng-click="moreResults()" ng-show="showMoreResultsButton()" value="More" />
+			<input type="button" ng-click="moreResults()" ng-show="showMoreResultsButton()" value="More" class="button-small" />
 		</div>
 	</div>
 
