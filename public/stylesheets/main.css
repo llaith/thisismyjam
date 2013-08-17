@@ -219,14 +219,23 @@ ul {
 .opacityAnimation-repeat-move { }
 .opacityAnimation-repeat-move.opacityAnimation-repeat-move-active { }
 
-/* AHAX message list */
+/* AJAX message list */
+
+.messagesList {
+	position: fixed;
+	top: 0;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
 
 .errorMessage, .successMessage {
 	color: white;
 	text-align: center;
-	font-weight: bold;
 	line-height: 1.2em;
 	border-radius: 2px;
+
+	font-height: 0.9em;
 }
 
 .errorMessage {
