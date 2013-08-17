@@ -29,7 +29,7 @@ angular
           return promise.then(
             function(successResponse) {
               if (successResponse.config.method.toUpperCase() != 'GET') {
-                sendMessage('Success', 'successMessage', 3000);
+                sendMessage('Operation successful!', 'successMessage', 3000);
               }
               return successResponse;
             }, 
@@ -37,7 +37,7 @@ angular
             function(errorResponse) {
               switch (errorResponse.status) {
                 case 400:
-                  sendMessage('Bad request', 'errorMessage', 5000);
+                  sendMessage('Server returned error: Bad request', 'errorMessage', 5000);
                   break;
                 case 401:
                   sendMessage('Wrong username or password', 'errorMessage', 5000);
@@ -49,7 +49,7 @@ angular
                   sendMessage('Internal server error', 'errorMessage', 5000);
                   break;
                 default:
-                  sendMessage('Unknown error: ' + errorResponse.status, 'errorMessage', 5000);  
+                  sendMessage('Server returned error: Unknown error: ' + errorResponse.status, 'errorMessage', 5000);  
               }
               return $q.reject(errorResponse);
             });
