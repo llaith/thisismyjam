@@ -114,6 +114,10 @@ ul {
 		font-size: 0.8em;
 		margin-left:  1.0em;
 	}
+
+.jamsArea ul .local {
+	color: #aaa;
+}
 	
 .results ul li input {
 	display: block;
@@ -125,3 +129,76 @@ ul {
 	margin-right: auto;
 	display: block;
 }
+
+.jamButton {
+	padding: 0;
+	width: 100%;
+
+	border: 1px solid #fff;
+	background-color: #fff;
+	text-align: left;
+}
+
+.jamButton:hover {
+	background-color: rgba(0, 31, 255, 1.0);
+	color: #fff;
+
+	border-radius: 3px;
+	border: 1px solid rgb(107, 124, 255);
+}
+
+.details {
+	float: left;
+}
+
+.jamButton .submittingIcon {
+	float:right;
+}
+
+.submittingIcon {
+	font-family: MeteoconsRegular;
+	margin: 1.0em 0.5em 0.5em 0.5em !important;
+}
+.submittingIcon p {
+	display: none;
+}
+
+.submittingIcon:after {
+	font-size: 2em;
+ 	color: rgb(255, 255, 255);
+	content: "9";
+	
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: loadingPulse;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-duration: 4s;
+	-moz-animation-name: loadingPulse;
+	-moz-animation-iteration-count: infinite;
+}
+
+.opacityAnimation-repeat-enter,
+.opacityAnimation-repeat-leave,
+.opacityAnimation-repeat-move {
+  -webkit-transition:all linear 0.7s;
+  -moz-transition:all linear 0.7s;
+  -ms-transition:all linear 0.7s;
+  -o-transition:all linear 0.7s;
+  transition:all linear 0.7s;
+}
+ 
+.opacityAnimation-repeat-enter {
+  opacity:0;
+}
+.opacityAnimation-repeat-enter.opacityAnimation-repeat-enter-active {
+  opacity:1;
+}
+ 
+.opacityAnimation-repeat-leave {
+  opacity:1;
+}
+.opacityAnimation-repeat-leave.opacityAnimation-repeat-leave-active {
+  opacity:0;
+}
+ 
+.opacityAnimation-repeat-move { }
+.opacityAnimation-repeat-move.opacityAnimation-repeat-move-active { }
