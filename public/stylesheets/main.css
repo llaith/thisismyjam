@@ -1,247 +1,258 @@
 /* Normalization */
 
-body {
-	margin: 0;
-	padding: 0;
-	font-family: 'lato', 'sans-serif';
-	width: 100%;
-	line-height: 1.5em;
-}
-
-div {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5 {
-	font-weight: normal;
-}
-
-h1  {
-	font-size: 3em;
-	font-family: 'novecentowide-medium', 'sans-serif';
-}
-
-	h1 em{
-		font-style: normal;
-		font-family: 'novecentowide-demibold', 'sans-serif';
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'lato', 'sans-serif';
+		width: 100%;
+		line-height: 1.5em;
 	}
 
-h2 {
-	font-family: 'novecentowide-normal', 'sans-serif';
-}
+	div {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-weight: normal;
+	}
+
+	h1  {
+		font-size: 3em;
+		font-family: 'novecentowide-medium', 'sans-serif';
+	}
+
+		h1 em{
+			font-style: normal;
+			font-family: 'novecentowide-demibold', 'sans-serif';
+		}
+
+	h2 {
+		font-family: 'novecentowide-normal', 'sans-serif';
+	}
 
 /* Title area */
 
-.titleArea, .jamsArea, .results {
-	text-align: center;
-}
-
-.titleArea  .colour {
-	color: hsl(233, 100%, 50%);
-}
-
-/* Loading icon */
-
-.loadingIcon {
-	font-family: 'MeteoconsRegular';
-	margin: 1.0em 0.5em 0.5em 0.5em !important;
-}
-.loadingIcon p {
-	display: none;
-}
-
-
-.loadingIcon:after {
-	font-size: 3em;
- 	color: hsl(0, 0%, 75%);
-	content: "8";
-	
-	-webkit-animation-duration: 2s;
-	-webkit-animation-name: loadingPulse;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-duration: 4s;
-	-moz-animation-name: loadingPulse;
-	-moz-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes loadingPulse {
-	from {
-		opacity: 1.0;
-	}		
-	50% {
-		opacity: 0.5;
-	}		
-	to {
-		opacity: 1.0;
+	.titleArea, .jamsArea, .results {
+		text-align: center;
 	}
-}
-@-moz-keyframes loadingPulse {
-	from {
-		opacity: 1.0;
-	}		
-	50% {
-		opacity: 0.5;
-	}		
-	to {
-		opacity: 1.0;
+
+	.titleArea  .colour {
+		color: hsl(233, 100%, 50%);
 	}
-}
+
+
 
 /* Standard list */
 
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0 auto;
-	width: 50%;
-}
-
-	ul  li {
-		margin:  0.5em auto;
-		text-align: left;
-		
-		border-bottom: 1px solid hsl(233, 100%, 90%);
-	}
-
-	ul  li  h3, h4 {
-		padding: 0em;
-		margin:  0;
-		line-height: 1.5em;
-	}
-	
-	ul  li  h3 {
-		padding:  0em;
-		font-size: 1.0em;
-		line-height: 1.25em;
-
-	}
-	
-	ul  li h4 {
+	ul {
+		list-style-type: none;
 		padding: 0;
-		font-size: 0.8em;
-		margin-left:  1.0em;
+		margin: 0 auto;
+		width: 50%;
 	}
+
+		ul  li {
+			margin:  0.5em auto;
+			text-align: left;
+			
+			border-bottom: 1px solid hsl(233, 100%, 90%);
+		}
+
+		ul  li  h3, h4 {
+			padding: 0em;
+			margin:  0;
+			line-height: 1.5em;
+		}
+		
+		ul  li  h3 {
+			padding:  0em;
+			font-size: 1.0em;
+			line-height: 1.25em;
+
+		}
+		
+		ul  li h4 {
+			padding: 0;
+			font-size: 0.8em;
+			margin-left:  1.0em;
+		}
 
 /* Jams listing */
 
-.jamsArea ul .local {
-	color: #aaa;
-}
+	.jamsArea ul .local {
+		color: #aaa;
+	}
 
 /* Results area */
 	
-.results ul li input {
-	display: block;
-	margin: 0.5em auto;
-}
+	.results ul li input {
+		display: block;
+		margin: 0.5em auto;
+	}
 
-.results input {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
+	.results input {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
 
-.jamButton {
-	padding: 0;
-	width: 100%;
+	.jamButton {
+		padding: 0;
+		width: 100%;
 
-	border: 1px solid #fff;
-	background-color: #fff;
-	text-align: left;
-}
+		border: 1px solid #fff;
+		background-color: #fff;
+		text-align: left;
+	}
 
-.jamButton:hover {
-	background-color: hsl(233, 100%, 50%);
-	color: #fff;
+	.jamButton:hover {
+		background-color: hsl(233, 100%, 50%);
+		color: #fff;
 
-	border-radius: 3px;
-	border: 1px solid hsl(233, 100%, 71%);
-}
+		border-radius: 3px;
+		border: 1px solid hsl(233, 100%, 71%);
+	}
 
-.details {
-	float: left;
-}
-
-.jamButton .submittingIcon {
-	float:right;
-}
-
-/* Submitting waiting icon */
-
-.submittingIcon {
-	font-family: 'MeteoconsRegular';
-	margin: 1.0em 0.5em 0.5em 0.5em !important;
-}
-.submittingIcon p {
-	display: none;
-}
-
-.submittingIcon:after {
-	font-size: 2em;
- 	color: hsl(0, 100%, 100%);
-	content: "9";
-	
-	-webkit-animation-duration: 2s;
-	-webkit-animation-name: loadingPulse;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-duration: 4s;
-	-moz-animation-name: loadingPulse;
-	-moz-animation-iteration-count: infinite;
-}
+	.details {
+		float: left;
+	}
 
 /* Animation for items appearing and disappearing from opacity change */
 
-.opacityAnimation-repeat-enter,
-.opacityAnimation-repeat-leave,
-.opacityAnimation-repeat-move {
-  -webkit-transition:all linear 0.7s;
-  -moz-transition:all linear 0.7s;
-  -ms-transition:all linear 0.7s;
-  -o-transition:all linear 0.7s;
-  transition:all linear 0.7s;
-}
- 
-.opacityAnimation-repeat-enter {
-  opacity:0;
-}
-.opacityAnimation-repeat-enter.opacityAnimation-repeat-enter-active {
-  opacity:1;
-}
- 
-.opacityAnimation-repeat-leave {
-  opacity:1;
-}
-.opacityAnimation-repeat-leave.opacityAnimation-repeat-leave-active {
-  opacity:0;
-}
- 
-.opacityAnimation-repeat-move { }
-.opacityAnimation-repeat-move.opacityAnimation-repeat-move-active { }
+	.opacityAnimation-repeat-enter,
+	.opacityAnimation-repeat-leave,
+	.opacityAnimation-repeat-move {
+	  -webkit-transition:all linear 0.7s;
+	  -moz-transition:all linear 0.7s;
+	  -ms-transition:all linear 0.7s;
+	  -o-transition:all linear 0.7s;
+	  transition:all linear 0.7s;
+	}
+	 
+	.opacityAnimation-repeat-enter {
+	  opacity:0;
+	}
+	.opacityAnimation-repeat-enter.opacityAnimation-repeat-enter-active {
+	  opacity:1;
+	}
+	 
+	.opacityAnimation-repeat-leave {
+	  opacity:1;
+	}
+	.opacityAnimation-repeat-leave.opacityAnimation-repeat-leave-active {
+	  opacity:0;
+	}
+	 
+	.opacityAnimation-repeat-move { }
+	.opacityAnimation-repeat-move.opacityAnimation-repeat-move-active { }
 
 /* AJAX message list */
 
-.messagesList {
-	position: fixed;
-	top: 0;
-	max-width: 100%;
-	width: 100%;
-	margin: 0 auto;
-}
+	.messagesList {
+		position: fixed;
+		top: 0;
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+	}
 
-.errorMessage, .successMessage {
-	color: white;
-	text-align: center;
-	line-height: 1.2em;
-	border-radius: 2px;
+	.errorMessage, .successMessage {
+		color: white;
+		text-align: center;
+		line-height: 1.2em;
+		border-radius: 2px;
 
-	font-height: 0.9em;
-}
+		font-height: 0.9em;
+	}
 
-.errorMessage {
-	background-color: red;
-}
+	.errorMessage {
+		background-color: red;
+	}
 
-.successMessage {
-	background-color: hsl(233, 100%, 65%);
-}
+	.successMessage {
+		background-color: hsl(233, 100%, 65%);
+	}
+
+/* Icons */
+
+	.icon-music {
+	    float: left;
+	    margin-right: 0.5em;
+	    color: hsl(233, 100%, 80%);
+	    font-size: 1em;
+	}
+
+	/* Loading icon */
+
+	.loadingIcon {
+		font-family: 'MeteoconsRegular';
+		margin: 1.0em 0.5em 0.5em 0.5em !important;
+	}
+		.loadingIcon p {
+			display: none;
+		}
+
+
+	.loadingIcon:after {
+		font-size: 3em;
+	 	color: hsl(0, 0%, 75%);
+		content: "8";
+		
+		-webkit-animation-duration: 2s;
+		-webkit-animation-name: loadingPulse;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-duration: 4s;
+		-moz-animation-name: loadingPulse;
+		-moz-animation-iteration-count: infinite;
+	}
+
+	@-webkit-keyframes loadingPulse {
+		from {
+			opacity: 1.0;
+		}		
+		50% {
+			opacity: 0.5;
+		}		
+		to {
+			opacity: 1.0;
+		}
+	}
+	@-moz-keyframes loadingPulse {
+		from {
+			opacity: 1.0;
+		}		
+		50% {
+			opacity: 0.5;
+		}		
+		to {
+			opacity: 1.0;
+		}
+	}
+
+	/* Submitting waiting icon */
+
+	.jamButton .submittingIcon {
+		float:right;
+	}
+
+	.submittingIcon {
+		font-family: 'MeteoconsRegular';
+		margin: 1.0em 0.5em 0.5em 0.5em !important;
+	}
+		.submittingIcon p {
+			display: none;
+		}
+
+	.submittingIcon:after {
+		font-size: 2em;
+	 	color: hsl(0, 100%, 100%);
+		content: "9";
+		
+		-webkit-animation-duration: 2s;
+		-webkit-animation-name: loadingPulse;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-duration: 4s;
+		-moz-animation-name: loadingPulse;
+		-moz-animation-iteration-count: infinite;
+	}
