@@ -101,7 +101,7 @@ ul {
 		margin:  0.5em auto;
 		text-align: left;
 		
-		border-bottom: 1px solid hsla(233, 100%, 90%);
+		border-bottom: 1px solid hsl(233, 100%, 90%);
 	}
 
 	ul  li  h3, h4 {
