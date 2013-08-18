@@ -51,7 +51,9 @@ object MusicModel extends Controller with MongoController {
 		    )
 	    jams_collection.insert(newSong).map{ lastError => 
 	    	Json.obj(
-	    		"ok" -> lastError.ok
+	    		"artist" -> artist,
+	    		"name" -> name,
+	    		"mbid" -> mbid
 	    	)
 		}
 	}
