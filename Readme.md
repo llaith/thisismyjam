@@ -12,6 +12,8 @@ A live version of the site is running at:
 
 [http://thisismyjam.herokuapp.com/](http://thisismyjam.herokuapp.com/)
 
+Keep in mind that it may take a long time to load, this is because the free tier of Heroku hosting lets the server sleep and it takes a long time to wake it up again.
+
 ##Credits
 
 Synthview: for the Novecento Wide web fonts
