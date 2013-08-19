@@ -16,10 +16,14 @@ import scala.concurrent.Future
 
 object Application extends Controller with MusicSearch {
   
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
+    /* Handles the controller functions for serving the index page.
+     */
+    def index = Action {
+        Ok(views.html.index())
+    }
 
+    /* Takes a search query from the request and returns a JSON result of that search
+     */
     def search = Action { implicit request =>
         Async {
     		musicSearch( 
@@ -28,6 +32,14 @@ object Application extends Controller with MusicSearch {
         }
     }  
 
+    /* Submits a song to be a "jam" from a supplied JSON request with the JSON objects "artist", "name" and
+     * "mbid".
+     *
+     * If any of these objects are not present in the request then an error response is rendered.
+     *
+     * The controller first checks the supplied information against an external service (or the cache before
+     * that) to verify that it is valid data for a song, otherwise it will render an error response.
+     */
     def submitSong = Action { implicit request => 
         val jsRequest = request.body.asJson.getOrElse(Json.obj())
 
@@ -107,6 +119,8 @@ object Application extends Controller with MusicSearch {
         }
     }
 
+    /* Returns the list of the last 25 "jammed" items in the database as a JSON array. 
+     */
     def listSongs = Action { implicit request =>
         Async {
             val songsList = MusicModel.listSongs(25)
